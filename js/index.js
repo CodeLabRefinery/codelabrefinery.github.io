@@ -11,4 +11,8 @@ $('.caller-search').click(function() { $('body').toggleClass("search-open");})
 
     });
 
+<<<<<<< HEAD
 }(jQuery));
+=======
+}(jQuery));
+>>>>>>> codelabrefinery/master
