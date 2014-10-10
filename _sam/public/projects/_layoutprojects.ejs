@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html id="top">
+   
+<% include ../_includes/head %>    
+    
+    
+<% var base = '';
+   for (i=0;i<current.path.length-1;i++){ base += '../' } %>
+<body>
+<div class="section-bars"> <a id="bars" href="#"><span></span></a></div>  
+    <% include ../_includes/aside %>
+    
+    <div class="wrapper">
+        
+        
+         
+          
+    <main class="main">
+
+      <article class="article">
+          <h1><%- title %></h1>
+          <div class="article-meta">
+             <time class="time"> on <%- date %></time> 
+              
+          </div>
+          <%- yield %>
+      </article>
+
+      <% include ../_includes/share %> 
+
+  </main>
+     
+        <nav class="subnav">
+
+    <%- partial("../_includes/project-nav") %>
+
+  </nav>  
+        
+      
+   
+<% include ../_includes/footer %>
+      
+    </div>
+
+  
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+ <script type="text/javascript" src="<%= base %>js/index.js"></script>     
+    
+    
+<% if(service.prism) { %>
+  <script src="<%= base %>js/prism.js"></script>
+<% } %>
+    
+    <% include ../_includes/analytics %>
+    
+</body>
+</html>

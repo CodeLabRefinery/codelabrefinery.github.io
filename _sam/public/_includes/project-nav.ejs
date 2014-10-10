@@ -1,0 +1,20 @@
+
+<%
+var pos, prevLink, nextLink;
+var projects = Object.keys(public.projects._data);
+
+if(projects[0] != current.source) {
+	pos = projects.indexOf(current.source);
+	prevLink = "<a href='/projects/" + projects[pos-1] + "'>Previous Project</a>";
+} else prevLink = "Previous Article";
+
+if(projects[projects.length-1] != current.source) {
+	pos = projects.indexOf(current.source);
+	nextLink = "<a href='/projects/" + projects[pos+1] + "'>Next Project</a>";
+} else nextLink = "Next Article";
+
+%>
+
+<%- prevLink %> / <%- nextLink %>
+
+<br clear="left"/>

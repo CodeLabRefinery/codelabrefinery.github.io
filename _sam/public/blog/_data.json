@@ -1,0 +1,40 @@
+{
+  "atom": {
+    "layout": "false"
+  },
+   "four-post": {
+    "layout": "_layoutblog",  
+    "title": "Four Post",
+    "date": "2014-08-14",
+    "tags": ["harp", "static", "blog"],
+    "author": "pablos"
+  },   
+   "third-post": {
+      "layout": "_layoutblog",   
+    "title": "Third Post",
+    "date": "2014-08-14",
+    "tags": ["harp", "static", "blog"],
+    "author": "pablos"
+  }, 
+  "second-post": {
+    "layout": "_layoutblog",  
+    "title": "Second Post",
+    "date": "2014-08-14",
+    "tags": ["harp", "static", "blog"],
+    "author": "pablos"
+  },
+  "draft-post": {
+    "layout": "_layoutblog",  
+    "title": "Draft post",
+    "date": "2013-12-20",
+    "author": "pablos",
+    "published": false
+  },
+  "first-post": {
+    "layout": "_layoutblog",   
+    "title": "First Post",
+    "date": "2014-08-14",
+    "tags": ["lorem" , "harp", "css"],
+    "author": "pablos"
+  }
+}

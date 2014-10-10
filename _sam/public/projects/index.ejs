@@ -1,0 +1,32 @@
+<h1>Projects</h1>
+
+<p>Share your portfolio here by editing the <code>projects/_data.json</code> file.</p>
+
+
+<% function excerpt(content) {
+  if(!content || content.indexOf("</p>") == -1) return;
+  else return content.split("<p>")[1].split("</p>")[0];
+} %>
+<main class="main">
+<ul class="index">
+  <% for(var slug in public.projects._data){ %>
+    <% var project = public.projects._data[slug] %>
+    <% if(project.title && project.published!==false) { %>
+      <li class="index-item">
+        <a class="index-link" href="<%= slug %>"> 
+           <h2 class="meta-title"><%= project.title %></h2>  
+        </a>
+          
+          <% if(project.date) { %><time class="meta-time time"><%= project.date %></time><% } %>     
+               
+          
+             
+          
+        <p><%- excerpt(partial(slug)) %></p>
+        <a class="index-more" href="<%= slug %>">•••</a>
+      </li>
+    <% } %>
+  <% } %>
+</ul>
+    
+    </main>
